@@ -1,0 +1,20 @@
+/*
+	Brand colors. Change the two base colors below; the other shades are derived from them.
+
+	Use in markup like any Tailwind color:
+	  bg-primary  hover:bg-primary-hover  text-primary  bg-primary-soft  text-primary-fg  border-primary
+	  (same names with "secondary")
+*/
+@theme {
+	--color-primary: #4f46e5;
+	--color-primary-fg: #ffffff; /* text on top of bg-primary */
+
+	--color-secondary: #0f766e;
+	--color-secondary-fg: #ffffff;
+
+	/* Derived: darker for hover, pale for badges and highlighted rows */
+	--color-primary-hover: color-mix(in oklab, var(--color-primary) 82%, black);
+	--color-primary-soft: color-mix(in oklab, var(--color-primary) 10%, white);
+	--color-secondary-hover: color-mix(in oklab, var(--color-secondary) 82%, black);
+	--color-secondary-soft: color-mix(in oklab, var(--color-secondary) 10%, white);
+}
